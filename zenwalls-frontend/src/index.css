@@ -1,0 +1,151 @@
+/*Main.js*/
+.navigationBar1 {
+    border-bottom: 0.3px solid rgba(97, 97, 97, 0.5);
+}
+
+.avatar {
+    display: inline;
+}
+
+.avatar:hover {
+    cursor: pointer;
+}
+
+.categories {
+    margin-right: 1.5rem;
+}
+
+.searchbox {
+    margin-right: 1.2rem;
+}
+
+
+/*BrowseBox.js*/
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.responsive-button {
+    padding: 10px 20px;
+    margin: 8px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #2980b9;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .button-container {
+        justify-content: space-around;
+    }
+}
+
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-item {
+    width: calc(33.33% - 10px);
+    /* Adjust the width as needed */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    /* Optional: Add border-radius for rounded corners */
+}
+
+/* InnerModal.js */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    height: 500px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ModalTrigger.css */
+.download-button {
+    color: #fff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.inputSearch{
+    border: none;
+}
+.inputSearch:focus {
+    outline: none;
+}
+.inputSearch:focus {
+    box-shadow: 0 0 28px rgba(25, 118, 210);
+}
+
+.box {
+    color: white;
+    text-align: center;
+    transition: font-size 0.5s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover,
+  .box:active {
+    font-size: 20px; /* Increase font size */
+    box-shadow: 0px 0px 20px rgba(25, 118, 210, 0.5); /* Apply box shadow */
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+  }
+  
+  .drop-in-div {
+    position: absolute;
+    top: -100px; /* Start position above the container */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 18px;
+
+    animation: dropIn 1s forwards; /* Apply animation */
+  }
+  
+  @keyframes dropIn {
+    from {
+      top: -100px; /* Start position above the container */
+    }
+    to {
+      top: 50px; /* End position, adjust as needed */
+    }
+  }
