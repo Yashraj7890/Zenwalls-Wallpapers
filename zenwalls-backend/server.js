@@ -93,6 +93,10 @@ app.get("/validate", async (req, res) => {
         // Credentials received
         console.log('Credentials received:', req.headers.cookie);
         res.send('Credentials received');
+    }else {
+        // Credentials not received
+        console.log('No credentials received');
+        res.status(401).send('No credentials received');
     }
     if (req.isAuthenticated()) {
         const user = await User.findById(req.user._id);
